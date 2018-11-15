@@ -22,7 +22,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    Show.where(:rating > 4)
-  end
+    Show.where("rating > ?", 4)
+  end 
 
 end
